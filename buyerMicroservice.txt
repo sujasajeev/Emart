@@ -1,0 +1,32 @@
+Buyer Microservice
+=================
+Tables needed
+	buyer *
+	shopping cart* (cart id, item id(onetomany), quantity, buyer id(manytoone)
+	items *
+	transaction(// add one more column "total amount")*
+	purchase history
+Relations
+	buyer-------(onetomany)OR(onetoone)----shopping cart
+	buyer-------(onetomany)---purchase history
+	buyer-------(onetomany)---transaction
+	shopping cart--(one to many)-- items
+
+Model,service(service),dao(repository) and controllers for buyer and shopping cart.
+
+add one more attribute:total amount  to transaction
+
+@Temporal\\\\ visit===   https://javabydeveloper.com/temporal/
+
+Note
+====
+8 endpoints
+
+
+Doubts
+======
+1)buyer and shopping cart have onetoone relation?
+sir: one to many
+mine:one to one
+
+2)transaction and purchase history are one to one?
