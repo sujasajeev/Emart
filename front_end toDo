@@ -1,0 +1,33 @@
+MAKE CODE CHANGES IN ANGULAR APP TO RETRIEVE PRODUCTS
+
+#1. In search-customer component, use customer-details to display all details of customer (send customer component from search-customer to customer-details, using @Input)
+NOTE: customer-details component(along with @Input) already exists
+
+#2. Create MOdel class with search options fields searchString, Manufacturer, fromPrice, toPrice
+#3. Add Seller service file(just like Customer service file) to send get Http Request to Seller REST API, also send object of #2 in the request
+NOTE: Use Angular CLI command to create Seller service, and copy/use code of Customer service accordingly
+
+#4. Create Item model(just like Customer) with required fields(refer Java Entity/Model class for fields)
+#5. Create search-products component just like search-customers
+NOTE: Use Angular CLI command to create-products components, and copy/use code of Customer service accordingly
+
+#6. add search-products to Router(app-routing.module.ts file)
+#7. Invoke method of #3 from search-products's onSubmit()
+------------------------
+
+
+
+#1. Add Model class with below required request fields
+{
+searchString: "",
+Manufacturer: "",
+fromPrice: ,
+toPrice: ,
+}
+
+#2. Add Seller REST Controller API end point, getMatchingProducts
+#3. In ItemRepository use CustomQuery to fetch results based on pattern matching %str%
+#4. Add a new Method in Service which accepts #1 as parameter
+#5. Invoke #4 from #2.
+#6. Test above, ensure it works fine, before proceeding with UI part
+
